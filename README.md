@@ -2,4 +2,4 @@
 
 ### Run
 ```bash
-python app/main.py
+python -m app.main

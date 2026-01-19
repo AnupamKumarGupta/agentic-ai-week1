@@ -7,8 +7,16 @@
 
 #Assignment 1
 
+# from app.agent import run_agent
+
+# if __name__ == "__main__":
+#     goal = "Summarize recent AI news"
+#     run_agent(goal)
+
+#Assignment 2
+
 from app.agent import run_agent
 
 if __name__ == "__main__":
-    goal = "Summarize recent AI news"
+    goal = "Explain inflation in simple terms"
     run_agent(goal)

@@ -42,9 +42,17 @@
 
 #Wednesday(21/01/2026)
 
+# from app.agent import run_agent
+ 
+# if __name__ == "__main__":
+#     goal = "Explain why humor improves communication"
+#     run_agent(goal)
+    
+
+#Friday (23/01/2026)
+
 from app.agent import run_agent
  
 if __name__ == "__main__":
-    goal = "Explain why humor improves communication"
+    goal = "Explain inflation in very simple terms"
     run_agent(goal)
-    

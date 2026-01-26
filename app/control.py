@@ -1,14 +1,21 @@
 def decide_next_step(memory: dict) -> str:
-    print("\n[CONTROL] Current memory:", memory)
+    print("\n[CONTROL] Current memory state")
+    print("Goal:\n", memory["goal"])
+    print("Steps:", len(memory["steps"]))
+    print("Completed:", memory["completed"])
+
 
     if memory["completed"]:
-        print("[CONTROL] completed=True → STOP")
         return "stop"
 
+    # Step 1: Ask LLM to explain notice
     if len(memory["steps"]) == 0:
-        print("[CONTROL] No steps yet → CALL LLM")
         return "call_llm"
 
-    print("[CONTROL] Steps exist → Mark completed and STOP")
+    # Step 2: Present explanation
+    if len(memory["steps"]) == 1:
+        return "use_tool"
+
+    # Step 3: Stop agent
     memory["completed"] = True
     return "stop"

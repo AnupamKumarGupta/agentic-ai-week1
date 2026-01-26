@@ -1,26 +1,31 @@
+#Friday (23/01/2026)
+
 from app.control import decide_next_step
 from app.llm import call_llm
 from app.memory import init_memory
-
+from app.tools import market_explainer_tool
+ 
 def run_agent(goal: str):
-    print("\n[AGENT] Starting agent")
     memory = init_memory(goal)
-
+ 
+    print("\n[AGENT] Starting agent")
+    print("[AGENT] Goal:", goal)
+ 
     while True:
-        print("\n[AGENT] Loop iteration started")
-
+        print("\n[AGENT] Loop iteration")
         step = decide_next_step(memory)
-        print("[AGENT] Control returned step:", step)
-
+        print("[AGENT] Control decided:", step)
+ 
         if step == "call_llm":
-            print("[AGENT] Executing LLM step")
             response = call_llm(goal)
-
             memory["steps"].append(response)
-            print("[AGENT] Memory updated, steps count:", len(memory["steps"]))
-
+            print("[AGENT] LLM Response:", response)
+ 
+        elif step == "use_tool":
+            result = market_explainer_tool(memory["steps"][-1])
+            memory["steps"].append(result)
+            print("[AGENT] Tool executed")
+ 
         elif step == "stop":
-            print("[AGENT] STOP received → breaking loop")
+            print("[AGENT] Agent stopped cleanly")
             break
-
-    print("[AGENT] Agent stopped cleanly")

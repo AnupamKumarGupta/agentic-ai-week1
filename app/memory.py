@@ -1,8 +1,8 @@
+#Friday (23/01/2026)
+
 def init_memory(goal: str) -> dict:
-    memory = {
+    return {
         "goal": goal,
         "steps": [],
         "completed": False
     }
-    print("[MEMORY] Initialized:", memory)
-    return memory

@@ -1,7 +1,7 @@
 {
-  "goal": "Explain the Aurangabad college notice in simple words",
+  "goal": "Explain the rules of Project Nebula in simple words",
   "steps": [
-    "The notice from Aurangabad College says that if you want to submit your exam forms for the semester, you must do it by October 18, 2026. If you miss this date, you won't be able to submit your forms at all, no matter what reason you have."
+    "Project Nebula has some important rules to follow:\n\n1. We write our code in a special language called ZYTHON-X.\n2. All ZYTHON-X files end with the .zx extension.\n3. Whenever we write 120 lines of code, we need to have a code review done.\n4. To fix any bugs in our code, we use a tool called NebulaScope.\n5. We are only allowed to deploy (make our code live) on Fridays, and it must be between 6 PM and 8 PM."
   ],
   "completed": true
 }

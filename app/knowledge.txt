@@ -1,3 +1,7 @@
-AURANGABAD COLLEGE NOTICE:
-The semester examination form submission deadline is 18 October 2026.
-Late submissions will not be accepted under any circumstances.
+INTERNAL SOFTWARE RULES – PROJECT NEBULA:
+
+1. Project Nebula uses a custom programming language called ZYTHON-X.
+2. ZYTHON-X files always use the .zx extension.
+3. Code reviews are mandatory after every 120 lines of code.
+4. Debugging is performed using a tool named NebulaScope.
+5. Deployment is allowed only on Fridays between 6 PM and 8 PM.

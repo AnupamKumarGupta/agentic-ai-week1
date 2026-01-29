@@ -7,5 +7,5 @@ if __name__ == "__main__":
         os.remove("agent_memory.json")
         print("[MAIN] Demo reset: old memory deleted")
 
-    goal = "Explain the Aurangabad college notice in simple words"
+    goal = "Explain the rules of Project Nebula in simple words"
     run_agent(goal)
